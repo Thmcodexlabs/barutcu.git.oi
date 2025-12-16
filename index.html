@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barutcu | Slider, Menü ve Galeri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="logodemir.png">
+<link rel="stylesheet" href="style.css">
+
+
+
+
+
+</head>
+
+<body>
+
+    <a href="#hero" class="logo-link-container">
+        <img src="logodemir.png" alt="Küçük Logo" class="logo">
+        <div class="logo-text-static">BARUTCU</div>
+    </a>
+
+    <div class="toggle-wrapper">
+        <button class="animated-button" id="menuToggleButton" onclick="toggleMenu(event)">
+            <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                </path>
+            </svg>
+            <span class="text" id="toggleText">MENÜ</span>
+            <span class="circle"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <div id="fullScreenMenu">
+        <div class="menu-content-wrapper">
+            <div class="right-panel">
+                <nav class="menu-nav">
+                    <ul>
+                        <li class="menu-item"><a href="index.html" onclick="toggleMenu()">ANA SAYFA</a> <span
+                                class="item-number">01</span></li>
+                        <li class="menu-item"><a href="#blurText" onclick="toggleMenu()">GALERİ</a> <span
+                                class="item-number">02</span></li>
+                        <li class="menu-item"><a href="#contact" onclick="toggleMenu()">İLETİŞİM</a> <span
+                                class="item-number">03</span></li>
+                        <li class="menu-item"><a href="#hakkımızda" onclick="toggleMenu()">HAKKIMIZDA</a> <span
+                                class="item-number">04</span></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main id="hero">
+        <ul class='slider'>
+            <li class='item' style="background-image: url('REKLAM.png')">
+                <div class='content'>
+                    <h2 class='title'>"Kutu Harf <br> Hizmetleri"</h2>
+                    <p class='description'> </p>
+                </div>
+            </li>
+            <li class='item' style="background-image: url('elektrot.png')">
+                <div class='content'>
+                    <h2 class='title'>"Elektrot Kaynağı <br> Çözümleri"</h2>
+                    <p class='description'> </p>
+                </div>
+            </li>
+            <li class='item' style="background-image: url('korkuluk.jpg')">
+                <div class='content'>
+                    <h2 class='title'>"Balkon Korkuluk <br> Dizaynı"</h2>
+                    <p class='description'> </p>
+                </div>
+            </li>
+            <li class='item' style="background-image: url('totem.png')">
+                <div class='content'>
+                    <h2 class='title'>"Tabela Hizmeti"</h2>
+                    <p class='description'> </p>
+                </div>
+            </li>
+            <li class='item' style="background-image: url('pirafabrik.jpg')">
+                <div class='content'>
+                    <h2 class='title'>"Pirafabrik Ev "</h2>
+                    <p class='description'> </p>
+                </div>
+            </li>
+            <li class='item' style="background-image: url('korkuluk.png')">
+                <div class='content'>
+                    <h2 class='title'>"Korkuluk Dizaynı"</h2>
+                    <p class='description'> </p>
+                </div>
+            </li>
+        </ul>
+        <nav class='nav'>
+            <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+            <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+        </nav>
+    </main>
+
+
+
+
+
+
+    <section id="services" class="py-20">
+        <div class="container max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-extrabold tracking-tight sm:text-5xl text-foreground mb-4">Uzmanlık Alanlarımız
+            </h2>
+            <p class="text-lg md:text-xl mb-16 max-w-3xl mx-auto" style="color: var(--muted-foreground);">
+                Kaliteyi ve güveni 30 yıllık tecrübemizle birleştirerek, her projeye özel, dayanıklı çözümler
+                üretiyoruz.
+            </p>
+            <div class="grid gap-8 md:grid-cols-3">
+                <div class="rounded-xl border p-8 shadow-md transition-transform hover:shadow-xl hover:translate-y-[-4px]"
+                    style="background-color: var(--card); border-color: var(--border);">
+                    <i data-lucide="wrench" class="h-12 w-12 mx-auto mb-4" style="color: var(--primary);"></i>
+                    <h3 class="text-xl font-bold mb-2">Demir Doğrama</h3>
+                    <p class="text-sm" style="color: var(--muted-foreground);">Ferforje, demir kapı, pencere, korkuluk
+                        ve çelik konstrüksiyon işleri.</p>
+                </div>
+                <div class="rounded-xl border p-8 shadow-md transition-transform hover:shadow-xl hover:translate-y-[-4px]"
+                    style="background-color: var(--card); border-color: var(--border);">
+                    <i data-lucide="megaphone" class="h-12 w-12 mx-auto mb-4" style="color: var(--primary);"></i>
+                    <h3 class="text-xl font-bold mb-2">Reklamcılık Hizmetleri</h3>
+                    <p class="text-sm" style="color: var(--muted-foreground);">Tabela, totem, kutu harf ve dijital baskı
+                        çözümleri.</p>
+                </div>
+                <div class="rounded-xl border p-8 shadow-md transition-transform hover:shadow-xl hover:translate-y-[-4px]"
+                    style="background-color: var(--card); border-color: var(--border);">
+                    <i data-lucide="sparkles" class="h-12 w-12 mx-auto mb-4" style="color: var(--primary);"></i>
+                    <h3 class="text-xl font-bold mb-2">Özel Tasarım Çözümleri</h3>
+                    <p class="text-sm" style="color: var(--muted-foreground);">Projenize özel, benzersiz ve fonksiyonel
+                        metal ve reklam tasarımları.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="barutcu-features-section py-12 bg-white sm:py-16 lg:py-20">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="text-center">
+
+                <h2 class="text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl xl:text-5xl font-pj">BARUTCU:
+                    Güçlü Yapılar, Çarpıcı Reklamlar</h2>
+                <p class="mt-4 text-base leading-7 text-gray-600 sm:mt-8 font-pj">Yılların tecrübesiyle demir doğrama
+                    sanatını, modern reklamcılık çözümleriyle birleştiriyor, projelerinize kalıcı değer katıyoruz. İşte
+                    bizi farklı kılan temel değerler:</p>
+            </div>
+
+            <div
+                class="grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24">
+
+                <div class="md:p-8 lg:p-14">
+                    <svg class="mx-auto text-brand" width="46" height="46" viewBox="0 0 46 46" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M45 29V23C45 10.85 35.15 1 23 1C10.85 1 1 10.85 1 23V29" stroke="#161616"
+                            stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M13 29H1V41C1 43.209 2.791 45 5 45H13V29Z" fill="#D4D4D8" stroke="#161616"
+                            stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M45 29H33V45H41C43.209 45 45 43.209 45 41V29Z" fill="#D4D4D8" stroke="#161616"
+                            stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Ödünsüz Kalite</h3>
+                    <p class="mt-5 text-base text-gray-600 font-pj">Proje ne olursa olsun, en üst düzeyde dayanıklılık
+                        ve güvenlik sunmak için yalnızca sertifikalı ve kaliteli demir malzemeler kullanırız.</p>
+                </div>
+
+                <div class="md:p-8 lg:p-14">
+                    <svg class="mx-auto text-brand" width="46" height="46" viewBox="0 0 46 46" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27 27H19V45H27V27Z" stroke="#161616" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9 37H1V45H9V37Z" fill="#D4D4D8" stroke="#161616" stroke-width="2"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M45 17H37V45H45V17Z" fill="#D4D4D8" stroke="#161616" stroke-width="2"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M5 17L15 7L23 15L37 1" stroke="#161616" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M28 1H37V10" stroke="#161616" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Sanatsal İşçilik</h3>
+                    <p class="mt-5 text-base text-gray-600 font-pj">Sıradan demir işçiliğinin ötesinde, ferforje, balkon
+                        ve merdiven korkuluklarında mekanınıza değer katacak estetik tasarımlar sunarız.</p>
+                </div>
+
+                <div class="md:p-8 lg:p-14">
+                    <svg class="mx-auto text-brand" width="42" height="42" viewBox="0 0 42 42" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M41 1H1V41H41V1Z" stroke="#161616" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M18 7H7V20H18V7Z" stroke="#161616" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M18 26H7V35H18V26Z" stroke="#161616" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M35 7H24V35H35V7Z" fill="#D4D4D8" stroke="#161616" stroke-width="2"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Maksimum Görünürlük</h3>
+                    <p class="mt-5 text-base text-gray-600 font-pj">Işıklı tabelalardan, vinil baskılara ve araç
+                        giydirmeye kadar tüm reklam çözümlerinizle markanızı öne çıkarıyoruz.</p>
+                </div>
+
+                <div class="md:p-8 lg:p-14">
+                    <svg class="mx-auto text-brand" width="42" height="42" viewBox="0 0 42 42" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.66667 25H6C3.23858 25 1 27.2386 1 30V37C1 39.7614 3.23858 42 6 42H36C38.7614 42 41 39.7614 41 37V30C41 27.2386 38.7614 25 36 25H31.8333C30.2685 25 29 26.2685 29 27.8333C29 29.3981 27.7315 30.6667 26.1667 30.6667H15.3333C13.7685 30.6667 12.5 29.3981 12.5 27.8333C12.5 26.2685 11.2315 25 9.66667 25Z"
+                            fill="#D4D4D8" />
+                        <path d="M9 9H33" stroke="#161616" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9 17H33" stroke="#161616" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M1 25H13V31H29V25H41" stroke="#161616" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M37 1H5C2.79086 1 1 2.79086 1 5V37C1 39.2091 2.79086 41 5 41H37C39.2091 41 41 39.2091 41 37V5C41 2.79086 39.2091 1 37 1Z"
+                            stroke="#161616" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Entegre Çözüm Ortaklığı</h3>
+                    <p class="mt-5 text-base text-gray-600 font-pj">Hem demir konstrüksiyon hem de tanıtım
+                        ihtiyaçlarınızı tek bir çatı altında toplayarak size zaman kazandıran tam hizmet sunarız.</p>
+                </div>
+
+                <div class="md:p-8 lg:p-14">
+                    <svg class="mx-auto text-brand" width="46" height="42" viewBox="0 0 46 42" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M30.562 18.4609C30.0511 17.9392 29.4292 17.5392 28.7426 17.2907C28.0559 17.0422 27.3221 16.9516 26.5956 17.0256C25.8692 17.0996 25.1687 17.3362 24.5462 17.718C23.9237 18.0998 23.3952 18.6169 23 19.2309C22.6049 18.6167 22.0764 18.0995 21.4539 17.7176C20.8315 17.3357 20.1309 17.099 19.4044 17.025C18.6779 16.951 17.944 17.0417 17.2573 17.2903C16.5706 17.5389 15.9488 17.939 15.438 18.4609C14.5163 19.4035 14.0002 20.6695 14.0002 21.9879C14.0002 23.3063 14.5163 24.5722 15.438 25.5149L23 33.1999L30.564 25.5159C31.485 24.5726 32.0004 23.3064 32 21.988C31.9997 20.6696 31.4835 19.4037 30.562 18.4609Z"
+                            fill="#D4D4D8" stroke="#161616" stroke-width="2" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M41 41H5C3.93913 41 2.92172 40.5786 2.17157 39.8284C1.42143 39.0783 1 38.0609 1 37V1H17L22 9H45V37C45 38.0609 44.5786 39.0783 43.8284 39.8284C43.0783 40.5786 42.0609 41 41 41Z"
+                            stroke="#161616" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Güvenilir Taahhüt</h3>
+                    <p class="mt-5 text-base text-gray-600 font-pj">Söz verdiğimiz teslimat sürelerine ve kalitesine
+                        bağlı kalırız. Projenizi zamanında ve tam olarak taahhüt edildiği gibi bitiririz.</p>
+                </div>
+
+                <div class="md:p-8 lg:p-14">
+                    <svg class="mx-auto text-brand" width="44" height="44" viewBox="0 0 44 44" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 7C34.941 7 43 15.059 43 25C43 34.941 34.941 43 25 43C15.059 43 7 34.941 7 25"
+                            stroke="#161616" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M19 1C9.059 1 1 9.059 1 19H19V1Z" fill="#D4D4D8" stroke="#161616" stroke-width="2"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900 font-pj">Yıllık Tecrübe</h3>
+                    <p class="mt-5 text-base text-gray-600 font-pj">Demir doğrama ve reklam sektöründeki derin bilgi
+                        birikimimizle her türlü karmaşık projeye etkili çözümler getiriyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="gallery-title">
+        <div class="blur-text" id="blurText">
+            <span>Proje</span><span>Galerisi</span>
+        </div>
+    </section>
+
+    <div class="gallery">
+
+        <a href="#" class="gallery__link" data-title="Modern Prefabrik Yapı"
+            data-info="Yüksek ısı yalıtımı ve hızlı kurulum avantajlarıyla öne çıkan, depreme dayanıklı modern prefabrik konut ve ofis çözümleri. Anahtar teslim projeler.">
+            <img src="galeripirefabrik.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Dekoratif Ferforje Korkuluk"
+            data-info="Balkon, merdiven ve pencere gibi alanlar için özel tasarım, dayanıklı ferforje ve demir korkuluklar. Güvenliği estetikle birleştiriyoruz.">
+            <img src="galerikorkuluk.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Modüler Prefabrik Uygulama"
+            data-info="Şantiye, acil yerleşim veya geçici ofis ihtiyacınız için pratik, modüler ve yüksek kalitede prefabrik ünitelerin kurulumu. Hızlı ve esnek çözümler.">
+            <img src="galeripirefabrik2.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Güvenlikli Demir Çit Sistemi"
+            data-info="Arazi, fabrika veya özel mülkler için caydırıcı ve uzun ömürlü demir çit ve panel sistemleri. Çevre güvenliğinizi maksimuma çıkarır.">
+            <img src="galeriçit.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Endüstriyel Metal Sandalye"
+            data-info="Kafe, restoran ve modern iç mekanlar için tasarlanmış, sağlam metal iskeletli ve konforlu endüstriyel tarzdaki oturma grupları.">
+            <img src="galerisandalye.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Çelik Konstrüksiyon Tente"
+            data-info="Geniş alanlar için dayanıklı, rüzgara ve kar yüküne karşı mukavemetli çelik konstrüksiyonlu tente ve pergolalar. Dış mekanlarınızı koruma altına alın.">
+            <img src="galeritente.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Loft Tarzı Demir Kitaplık"
+            data-info="Minimalist ve endüstriyel dekorasyona uygun, ağır yük taşıma kapasiteli, özel tasarım metal ve ahşap kombinasyonlu kitaplık ve raf sistemleri.">
+            <img src="galerikitaplık.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Ekonomik Garaj Tentesi"
+            data-info="Aracınızı dış etkenlerden koruyan, basit ama sağlam demir profil yapısıyla hızlı kurulan ve uygun maliyetli tek araçlık garaj çözümleri.">
+            <img src="galerigarajtente.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Çoklu Garaj Tente Projesi"
+            data-info="Toplu konutlar, siteler ve işletmeler için birden fazla aracı korumaya yönelik, geniş açıklıklı ve dayanıklı çelik garaj tente projeleri.">
+            <img src="galeridış.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Yapısal Çelik Konstrüksiyon"
+            data-info="Büyük ölçekli binalar, hangarlar ve depolar için projelendirilmiş, yüksek dayanıklılık gerektiren yapısal çelik konstrüksiyon ve taşıyıcı sistemler.">
+            <img src="galeriçelik.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Özel Tasarım Metal Sanatları"
+            data-info="Müşteri vizyonuna özel, estetik ve sanatsal metal işçiliği gerektiren dekoratif kapı, panel veya heykel tarzı projeler.">
+            <img src="galeripanel.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+        <a href="#" class="gallery__link" data-title="Totem Tabela Projeleri"
+            data-info="Yol kenarları ve geniş alanlar için özel olarak tasarlanmış, markanızın uzaktan maksimum görünürlüğünü sağlayan, büyük ölçekli ve etkileyici tabela konstrüksiyonları.">
+            <img src="totem.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title=" Cephe Uygulamaları / Araç Kaplama"
+            data-info="İşletmenizin kurumsal kimliğini dış dünyaya yansıtan dayanıklı tabela sistemleri ve **araçlarınızın mobil reklam yüzeyine dönüştürülmesi için profesyonel folyo kaplama hizmetleri**. Yüksek kaliteli malzeme ile uzun ömürlü çözümler sunuyoruz.">
+            <img src="galeriaraçkaplama.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Işıklı Tabela Sistemleri"
+            data-info="Branda (vinil) ve Folyo Baskı, reklam sektöründe kullanılan, dayanıklı, esnek yüzeylere (PVC veya yapışkanlı) uygulanan yüksek çözünürlüklü dijital baskı çözümleridir. Branda çoğunlukla afiş ve dış mekan pankartları için, folyo ise araç giydirme ve cam/duvar uygulamaları için tercih edilir.">
+            <img src="galeribaskı.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Totem Tabela Projeleri"
+            data-info="Geniş araziler ve işlek yol kenarları için özel olarak tasarlanmış, uzaktan bile fark edilmeyi sağlayan büyük ölçekli ve etkileyici totem tabela konstrüksiyonları. Markanızın konumunu belirleyen, güçlü ve kalıcı tanıtım araçlarıdır.">
+            <img src="galeriışıklıtabela.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+        <a href="#" class="gallery__link" data-title="Krom Harfler"
+            data-info="Tabelanıza anında prestij ve lüks bir hava katan krom harf çözümleri. Özel kromaj işlemi ile yüzeyi ayna parlaklığında, metalik ve üç boyutlu (3D) bir görünüme sahip olan bu harfler, markanızın kalitesini yansıtır.">
+            <img src="REKLAM.png" class="gallery__image">
+            <span class="img-plus">+</span>
+        </a>
+
+
+        <div class="image-modal" id="imageModal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+
+                <div class="modal-inner">
+                    <img id="modalImage" alt="Proje Resmi">
+                    <div class="modal-info">
+                        <h3 id="modalTitle">Proje Adı</h3>
+                        <p id="modalDescription">Hızlı, ekonomik ve güvenli yaşam alanları için modern çözümler.
+                            İhtiyacınız olan dayanıklı ve pratik yapılar, en kısa sürede kullanıma hazır.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="gallery-more" id="galleryMore">Devamını Gör
+        </button>
+
+    </div>
+
+
+
+
+
+    <div class="heroo">
+        <div class="reveal">
+            <h1 id="hakkımızda">Biz Kimiz?</h1>
+            <p>Sağlam yapılar, güçlü markalar</p>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <div class="reveal">
+            <h2>Barutcu Demir Doğrama & Reklam</h2>
+            <p>
+                30 yıldır demir doğrama ve reklam sektöründe edindiğimiz tecrübe ile sağlamlığı, estetiği ve
+                işlevselliği bir araya getiriyoruz. Kurulduğumuz günden bu yana kaliteyi ön planda tutarak; her projede
+                uzun ömürlü, güvenilir ve özgün çözümler sunmayı hedefledik.
+            </p>
+            <div class="values">
+                <div class="value">⚙️ Kalite</div>
+                <div class="value">✨ Estetik</div>
+                <div class="value">🤝 Güven</div>
+            </div>
+        </div>
+        <div class="about-img reveal">
+  
+        </div>
+
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="journey">
+        <div class="timeline">
+            <h2>Yolculuğumuz</h2>
+            <div class="line">
+                <div class="step">
+
+                    <p>Sektöre ilk adımlarımızı attık.</p>
+                </div>
+                <div class="step">
+
+                    <p>Yerel projeler ve referanslarımız arttı.</p>
+                </div>
+                <div class="step">
+
+                    <p>Atölyemizi büyüttük, ekipmanlarımızı yeniledik.</p>
+                </div>
+                <div class="step">
+
+                    <p>Kurumsal firmalara özel çözümler üretmeye başladık.</p>
+                </div>
+                <div class="step">
+
+                    <p>Anahtar teslim projeler ile estetik ve fonksiyon bir arada.</p>
+                </div>
+                <div class="step">
+                    <h4>Bugün</h4>
+                    <p>Güçlü, güvenilir ve sürdürülebilir marka olarak devam ediyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stat reveal">
+            <h3 class="counter" data-target="30">0</h3>
+            <p>Yıl Deneyim</p>
+        </div>
+        <div class="stat reveal">
+            <h3 class="counter" data-target="240">0</h3>
+            <p>Proje</p>
+        </div>
+        <div class="stat reveal">
+            <h3 class="counter" data-target="100">0</h3>
+            <p>Memnuniyet</p>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+
+            <div class="left">
+                <div class="hero-visual">
+                    <svg viewBox="0 0 400 300" class="floating-svg">
+                        <circle cx="200" cy="150" r="90" fill="#2563eb" opacity=".12" />
+                        <rect x="120" y="80" rx="14" ry="14" width="160" height="120" fill="#fff" stroke="#e5e7eb" />
+                        <path d="M140 110h120M140 140h90M140 170h60" stroke="#2563eb" stroke-width="4"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h1>Bizimle İletişime Geçin</h1>
+                <p>Teklif, proje ve iş birlikleri için şirketimizle hızlıca iletişim kurabilirsiniz.</p>
+                <div class="info">
+                    <span>🏢 Barutcu Demir Doğrama-Reklam</span>
+                    <span>📍 Türkiye/Antalya</span>
+                    <span>📧 tahabarutcu9@gmail.com</span>
+                    <span>📞 +90 507 882 35 61</span>
+                </div>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/taha-barutcu-075a6b328/" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M4.98 3.5C4.98 4.88 3.86 6 2.49 6S0 4.88 0 3.5 1.12 1 2.49 1s2.49 1.12 2.49 2.5zM.22 8.09h4.55V24H.22zM8.98 8.09h4.36v2.17h.06c.61-1.16 2.11-2.38 4.35-2.38 4.65 0 5.51 3.06 5.51 7.04V24h-4.55v-6.91c0-1.65-.03-3.78-2.3-3.78-2.31 0-2.66 1.8-2.66 3.66V24H8.98z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://www.instagram.com/barutcu.reklam/" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <rect x="3" y="3" width="18" height="18" rx="5" />
+                            <circle cx="12" cy="12" r="4" />
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                        </svg>
+                        Instagram
+                    </a>
+                    <a href="https://thmcodexlabs.com/" target="_blank" aria-label="Web Site">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M2 12h20M12 2c3.5 3.8 3.5 15.8 0 20M12 2c-3.5 3.8-3.5 15.8 0 20" />
+                        </svg>
+                        Web
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <form class="form" id="contactForm" action="https://formspree.io/f/mdkqbydk" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="company" required placeholder=" " />
+                        <label>Firma Adı - Veya Adınız</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" required placeholder=" " />
+                        <label>E‑posta</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" required placeholder=" "></textarea>
+                        <label>Proje / Mesaj Detayı</label>
+                    </div>
+                    <button type="submit">Talep Gönder</button>
+                    <div class="success" id="successMsg">Mesajınız alındı ✓</div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer-ui">
+
+        <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <i class="fa-solid fa-arrow-up">^</i>
+        </button>
+
+        <div class="footer-wrap">
+
+            <div class="footer-logo">
+                <img src="logodemir.png" alt="Barutcu Demir Doğrama Logo">
+                <span>Barutcu Demir Doğrama</span>
+            </div>
+
+
+
+            <p class="footer-text">
+                Demir doğrama, ferforje, çelik kapı ve özel metal çözümlerinde
+                kaliteli işçilik ve güvenilir hizmet.
+            </p>
+
+            <nav class="footer-nav">
+                <a href="#">Hizmetlerimiz</a>
+                <a href="#">Referanslar</a>
+                <a href="#">İletişim</a>
+            </nav>
+
+            <div class="footer-copy">
+                © 2025 Barutcu Demir Doğrama • Reklam & Tanıtım
+            </div>
+
+            <div class="footer-legal">
+                <span>Yasal</span>
+                <a href="yasal.html" target="_blank" rel="noopener noreferrer">Şartlar ve Koşullar</a>
+                <a href="yasal.html" target="_blank" rel="noopener noreferrer">Gizlilik Politikası</a>
+                <a href="yasal.html" target="_blank" rel="noopener noreferrer">Çerez Politikası</a>
+                <a href="yasal.html" target="_blank" rel="noopener noreferrer">Yasal Uyarı</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="float-contact">
+
+        <!-- TELEFON -->
+        <a href="tel:+905078823561" class="Btn phone" aria-label="Telefon ile ara">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.55.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.25 1.01z" />
+            </svg>
+        </a>
+
+        <!-- WHATSAPP (GERÇEK LOGO) -->
+        <a href="https://wa.me/905078823561" target="_blank" class="Btn whatsapp" aria-label="WhatsApp ile yaz">
+            <svg viewBox="0 0 32 32">
+                <path
+                    d="M16 3C9.373 3 4 8.373 4 15c0 2.63.84 5.07 2.28 7.06L4 29l7.16-2.2A12.9 12.9 0 0016 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 21.5c-2.07 0-4.09-.61-5.82-1.75l-.42-.26-4.24 1.3 1.32-4.13-.28-.44A9.44 9.44 0 016.5 15c0-5.24 4.26-9.5 9.5-9.5s9.5 4.26 9.5 9.5-4.26 9.5-9.5 9.5zm5.1-6.8c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.62.14-.18.28-.72.9-.88 1.08-.16.18-.33.2-.6.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.38-1.63-1.54-1.9-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.18-.28.28-.47.09-.18.05-.35-.02-.5-.07-.14-.62-1.5-.85-2.06-.23-.54-.46-.47-.62-.48l-.53-.01c-.18 0-.47.07-.72.35s-.94.92-.94 2.25.97 2.62 1.11 2.8c.14.18 1.9 2.9 4.6 4.07.64.28 1.15.44 1.54.56.65.21 1.25.18 1.72.11.52-.08 1.62-.66 1.85-1.31.23-.65.23-1.2.16-1.31-.07-.12-.25-.18-.53-.32z" />
+            </svg>
+        </a>
+
+    </div>
+   <script src="script.js"></script>
+</body>
+
+</html>

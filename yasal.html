@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yasal Bilgilendirme | Barutcu Demir Doğrama & Reklam</title>
+  <link rel="icon" type="image/png" href="logodemir.png">
+  <style>
+    /* =====================
+   RESET & BASE
+===================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: #f4f5f7;
+      color: #2b2b2b;
+      line-height: 1.8;
+    }
+
+    /* =====================
+   CONTAINER
+===================== */
+    .container {
+      max-width: 980px;
+      margin: 80px auto;
+      background: #ffffff;
+      padding: 70px 70px;
+      border-radius: 14px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .06);
+    }
+
+    /* =====================
+   HEADER
+===================== */
+    .page-header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .page-header h1 {
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: .6px;
+      margin-bottom: 14px;
+      color: #111;
+    }
+
+    .page-header p {
+      font-size: 15px;
+      color: #666;
+    }
+
+    /* =====================
+   SECTION
+===================== */
+    .legal-section {
+      margin-bottom: 70px;
+    }
+
+    .legal-section h2 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: #111;
+    }
+
+    .legal-section p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 14px;
+    }
+
+    .legal-section ul {
+      margin-top: 12px;
+      padding-left: 18px;
+    }
+
+    .legal-section li {
+      font-size: 15px;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    /* =====================
+   DIVIDER
+===================== */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #ddd, transparent);
+      margin: 70px 0;
+    }
+
+    /* =====================
+   FOOTER
+===================== */
+    .page-footer {
+      border-top: 1px solid #e5e5e5;
+      padding-top: 24px;
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #777;
+      gap: 20px;
+    }
+
+    .page-footer span {
+      white-space: nowrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    .footer-links a {
+      color: #666;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .footer-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 1px;
+      background: #111;
+      transition: .3s;
+    }
+
+    .footer-links a:hover {
+      color: #111;
+    }
+
+    .footer-links a:hover::after {
+      width: 100%;
+    }
+
+    /* =====================
+   MEDIA QUERY
+===================== */
+
+    /* TABLET */
+    @media(max-width:992px) {
+      .container {
+        padding: 60px 40px;
+      }
+
+      .page-header h1 {
+        font-size: 30px;
+      }
+    }
+
+    /* MOBİL */
+    @media(max-width:768px) {
+      .container {
+        margin: 40px 16px;
+        padding: 40px 22px;
+      }
+
+      .page-header {
+        margin-bottom: 50px;
+      }
+
+      .page-header h1 {
+        font-size: 26px;
+      }
+
+      .legal-section {
+        margin-bottom: 50px;
+      }
+
+      .legal-section h2 {
+        font-size: 20px;
+      }
+
+      .page-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="page-header">
+      <h1>Yasal Bilgilendirme</h1>
+      <p>Barutcu Demir Doğrama & Reklam</p>
+    </div>
+
+    <!-- ŞARTLAR -->
+    <section class="legal-section" id="sartlar">
+      <h2>Şartlar ve Koşullar</h2>
+      <p>
+        Barutcu Demir Doğrama & Reklam web sitesini ziyaret eden tüm kullanıcılar,
+        aşağıda belirtilen şartları okumuş ve kabul etmiş sayılır.
+      </p>
+      <p>
+        Web sitesinde yer alan tüm içerikler bilgilendirme amaçlı olup,
+        herhangi bir taahhüt niteliği taşımaz.
+      </p>
+      <ul>
+        <li>İçerikler önceden haber verilmeksizin değiştirilebilir.</li>
+        <li>Hizmet bilgilerinde teknik değişiklikler yapılabilir.</li>
+        <li>Siteyi kullanan kullanıcı tüm sorumluluğu kabul eder.</li>
+      </ul>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- GİZLİLİK -->
+    <section class="legal-section" id="gizlilik">
+      <h2>Gizlilik Politikası</h2>
+      <p>
+        Barutcu Demir Doğrama & Reklam, ziyaretçilerinin kişisel bilgilerinin
+        gizliliğini korumayı ilke edinmiştir.
+      </p>
+      <p>
+        İletişim formları aracılığıyla paylaşılan bilgiler, üçüncü kişilerle
+        kesinlikle paylaşılmaz.
+      </p>
+      <ul>
+        <li>Kişisel veriler yalnızca hizmet amaçlı kullanılır.</li>
+        <li>Yetkisiz erişimlere karşı gerekli önlemler alınır.</li>
+        <li>KVKK kapsamında veri güvenliği sağlanır.</li>
+      </ul>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ÇEREZ -->
+    <section class="legal-section" id="cerez">
+      <h2>Çerez Politikası</h2>
+      <p>
+        Web sitemizde kullanıcı deneyimini geliştirmek ve site performansını
+        analiz etmek amacıyla çerezler kullanılmaktadır.
+      </p>
+      <p>
+        Tarayıcı ayarlarınızdan çerez kullanımını kontrol edebilir veya
+        tamamen devre dışı bırakabilirsiniz.
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- YASAL -->
+    <section class="legal-section" id="yasal">
+      <h2>Yasal Uyarı</h2>
+      <p>
+        Bu web sitesinde yer alan tüm yazılar, görseller ve içerikler
+        Barutcu Demir Doğrama & Reklam’a aittir.
+      </p>
+      <p>
+        İzinsiz kopyalanması, çoğaltılması veya ticari amaçla kullanılması
+        yasaktır.
+      </p>
+    </section>
+
+  
+
+  </div>
+
+</body>
+
+</html>
