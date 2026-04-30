@@ -500,3 +500,40 @@
                 }
             }, { threshold: .6 }).observe(c);
         });
+
+
+        
+
+
+// SEARCH
+document.getElementById("search").addEventListener("input", function(){
+  let v = this.value.toLowerCase();
+  document.querySelectorAll(".card").forEach(c=>{
+    c.style.display = c.innerText.toLowerCase().includes(v) ? "block" : "none";
+  });
+});
+
+// FILTER
+function filter(cat){
+  document.querySelectorAll(".card").forEach(c=>{
+    c.style.display = (cat==="all" || c.classList.contains(cat)) ? "block" : "none";
+  });
+
+  document.querySelectorAll(".filters button").forEach(b=>b.classList.remove("active"));
+  event.target.classList.add("active");
+}
+
+// READ MORE TOGGLE
+function toggleMore(btn){
+  let card = btn.closest(".card");
+  card.classList.toggle("active");
+
+  btn.innerText = card.classList.contains("active") ? "Kapat" : "Devamını Oku";
+}
+
+
+
+
+
+
+        
